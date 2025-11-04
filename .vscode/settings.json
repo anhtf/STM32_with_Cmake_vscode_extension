@@ -15,6 +15,8 @@
     "files.associations": {
         "main.h": "c",
         "_h743_hals.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "stm32h7xx_hal.h": "c",
+        "string.h": "c"
     }
 }

@@ -13,6 +13,7 @@ set(MX_Defines_Syms
 set(MX_Include_Dirs
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Services/hals
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Services/users
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Services/utils
     
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Inc
     ${CMAKE_CURRENT_SOURCE_DIR}/../../USB_DEVICE/App
