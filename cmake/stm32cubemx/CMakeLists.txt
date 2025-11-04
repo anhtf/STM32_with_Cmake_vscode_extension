@@ -11,6 +11,9 @@ set(MX_Defines_Syms
 
 # STM32CubeMX generated include paths
 set(MX_Include_Dirs
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Services/hals
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Services/users
+    
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Inc
     ${CMAKE_CURRENT_SOURCE_DIR}/../../USB_DEVICE/App
     ${CMAKE_CURRENT_SOURCE_DIR}/../../USB_DEVICE/Target
@@ -24,6 +27,12 @@ set(MX_Include_Dirs
 
 # STM32CubeMX generated application sources
 set(MX_Application_Src
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Services/hals/_h743_hal_gpio.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Services/hals/_h743_hal_delay.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Services/hals/_h743_hal_uart.c
+
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Services/users/u_comm.c
+
     ${CMAKE_CURRENT_SOURCE_DIR}/../../USB_DEVICE/Target/usbd_conf.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../USB_DEVICE/App/usb_device.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../USB_DEVICE/App/usbd_desc.c
@@ -89,7 +98,8 @@ set(MX_LINK_DIRS
 set(MX_LINK_LIBS 
     STM32_Drivers
     ${TOOLCHAIN_LINK_LIBRARIES}
-    USB_Device_Library	
+    USB_Device_Library
+	
 )
 # Interface library for includes and symbols
 add_library(stm32cubemx INTERFACE)
